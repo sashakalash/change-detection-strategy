@@ -1,0 +1,9 @@
+<div *ngIf="!list.length;else listTemp">
+  loading...
+</div>
+<ng-template #listTemp>
+  <ul>
+    <li *ngFor="let item of list"
+    >{{item.title}}</li>
+  </ul>
+</ng-template>
